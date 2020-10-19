@@ -1,0 +1,50 @@
+﻿@model IEnumerable<clienteRest.Models.mvcProductModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a href="@Url.Action("AddOrEdit","product")" class="btn btn-default"> Crear un nuevo Producto</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CODIGO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRECIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EXISTENCIAS)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CODIGO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRECIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EXISTENCIAS)
+        </td>
+        <td>
+            <a href="@Url.Action("AddOrEdit","product", new { id = item.CODIGO })" class="btn btn-default">Editar</a> |
+            <a href="@Url.Action("Delete","product", new { id = item.CODIGO })" class="btn btn-default">Eliminar</a> |
+        </td>
+    </tr>
+}
+
+</table>

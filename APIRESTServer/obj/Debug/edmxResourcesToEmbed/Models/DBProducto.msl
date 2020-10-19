@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ORACLEDOCKERModelStoreContainer" CdmEntityContainer="ORACLEDOCKEREntities">
+    <EntitySetMapping Name="PRODUCTOS">
+      <EntityTypeMapping TypeName="ORACLEDOCKERModel.PRODUCTO">
+        <MappingFragment StoreEntitySet="PRODUCTOS">
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+          <ScalarProperty Name="EXISTENCIAS" ColumnName="EXISTENCIAS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
